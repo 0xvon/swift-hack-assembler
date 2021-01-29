@@ -1,0 +1,25 @@
+{
+  "object": {
+    "pins": [
+      {
+        "package": "swift-argument-parser",
+        "repositoryURL": "https://github.com/apple/swift-argument-parser",
+        "state": {
+          "branch": null,
+          "revision": "9564d61b08a5335ae0a36f789a7d71493eacadfc",
+          "version": "0.3.2"
+        }
+      },
+      {
+        "package": "SwiftIO",
+        "repositoryURL": "https://github.com/sharplet/SwiftIO.git",
+        "state": {
+          "branch": null,
+          "revision": "6a5c67a28e40bd602628152f24627d7a840f5f0b",
+          "version": "0.2.0"
+        }
+      }
+    ]
+  },
+  "version": 1
+}

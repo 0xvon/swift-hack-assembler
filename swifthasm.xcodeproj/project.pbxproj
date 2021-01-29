@@ -3,28 +3,46 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 50;
+	objectVersion = 52;
 	objects = {
 
 /* Begin PBXBuildFile section */
 		D97F980D25C3BF5C00EA830A /* main.swift in Sources */ = {isa = PBXBuildFile; fileRef = D97F980C25C3BF5C00EA830A /* main.swift */; };
+		D97F981425C3C06900EA830A /* swifthasm in CopyFiles */ = {isa = PBXBuildFile; fileRef = D97F980925C3BF5C00EA830A /* swifthasm */; };
+		D97F981825C3C10700EA830A /* Parser.swift in Sources */ = {isa = PBXBuildFile; fileRef = D97F981725C3C10700EA830A /* Parser.swift */; };
+		D97F981B25C3C43F00EA830A /* AssemblerFormatter.swift in Sources */ = {isa = PBXBuildFile; fileRef = D97F981A25C3C43F00EA830A /* AssemblerFormatter.swift */; };
+		D97F981E25C3CE8E00EA830A /* SymbolTable.swift in Sources */ = {isa = PBXBuildFile; fileRef = D97F981D25C3CE8E00EA830A /* SymbolTable.swift */; };
+		D97F982125C3D76500EA830A /* Code.swift in Sources */ = {isa = PBXBuildFile; fileRef = D97F982025C3D76500EA830A /* Code.swift */; };
+		D97F982425C3DC9800EA830A /* Assembler.swift in Sources */ = {isa = PBXBuildFile; fileRef = D97F982325C3DC9800EA830A /* Assembler.swift */; };
+		D97F982825C3E40900EA830A /* ArgumentParser in Frameworks */ = {isa = PBXBuildFile; productRef = D97F982725C3E40900EA830A /* ArgumentParser */; };
+		D97F982D25C3E80100EA830A /* SwiftIO in Frameworks */ = {isa = PBXBuildFile; productRef = D97F982C25C3E80100EA830A /* SwiftIO */; };
+		D97F983025C3E81D00EA830A /* FileHandler.swift in Sources */ = {isa = PBXBuildFile; fileRef = D97F982F25C3E81D00EA830A /* FileHandler.swift */; };
+		D97F983325C3E91D00EA830A /* PathExtensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = D97F983225C3E91D00EA830A /* PathExtensions.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXCopyFilesBuildPhase section */
 		D97F980725C3BF5C00EA830A /* CopyFiles */ = {
 			isa = PBXCopyFilesBuildPhase;
-			buildActionMask = 2147483647;
-			dstPath = /usr/share/man/man1/;
+			buildActionMask = 12;
+			dstPath = /usr/local/bin;
 			dstSubfolderSpec = 0;
 			files = (
+				D97F981425C3C06900EA830A /* swifthasm in CopyFiles */,
 			);
-			runOnlyForDeploymentPostprocessing = 1;
+			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
-		D97F980925C3BF5C00EA830A /* Assembler */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.executable"; includeInIndex = 0; path = Assembler; sourceTree = BUILT_PRODUCTS_DIR; };
+		D97F980925C3BF5C00EA830A /* swifthasm */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.executable"; includeInIndex = 0; path = swifthasm; sourceTree = BUILT_PRODUCTS_DIR; };
 		D97F980C25C3BF5C00EA830A /* main.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = main.swift; sourceTree = "<group>"; };
+		D97F981725C3C10700EA830A /* Parser.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Parser.swift; sourceTree = "<group>"; };
+		D97F981A25C3C43F00EA830A /* AssemblerFormatter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AssemblerFormatter.swift; sourceTree = "<group>"; };
+		D97F981D25C3CE8E00EA830A /* SymbolTable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SymbolTable.swift; sourceTree = "<group>"; };
+		D97F982025C3D76500EA830A /* Code.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Code.swift; sourceTree = "<group>"; };
+		D97F982325C3DC9800EA830A /* Assembler.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Assembler.swift; sourceTree = "<group>"; };
+		D97F982F25C3E81D00EA830A /* FileHandler.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FileHandler.swift; sourceTree = "<group>"; };
+		D97F983225C3E91D00EA830A /* PathExtensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PathExtensions.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -32,6 +50,8 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				D97F982D25C3E80100EA830A /* SwiftIO in Frameworks */,
+				D97F982825C3E40900EA830A /* ArgumentParser in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -41,7 +61,7 @@
 		D97F980025C3BF5C00EA830A = {
 			isa = PBXGroup;
 			children = (
-				D97F980B25C3BF5C00EA830A /* Assembler */,
+				D97F980B25C3BF5C00EA830A /* swifthasm */,
 				D97F980A25C3BF5C00EA830A /* Products */,
 			);
 			sourceTree = "<group>";
@@ -49,25 +69,40 @@
 		D97F980A25C3BF5C00EA830A /* Products */ = {
 			isa = PBXGroup;
 			children = (
-				D97F980925C3BF5C00EA830A /* Assembler */,
+				D97F980925C3BF5C00EA830A /* swifthasm */,
 			);
 			name = Products;
 			sourceTree = "<group>";
 		};
-		D97F980B25C3BF5C00EA830A /* Assembler */ = {
+		D97F980B25C3BF5C00EA830A /* swifthasm */ = {
 			isa = PBXGroup;
 			children = (
+				D97F982A25C3E76100EA830A /* FileHandler */,
 				D97F980C25C3BF5C00EA830A /* main.swift */,
+				D97F981725C3C10700EA830A /* Parser.swift */,
+				D97F981D25C3CE8E00EA830A /* SymbolTable.swift */,
+				D97F981A25C3C43F00EA830A /* AssemblerFormatter.swift */,
+				D97F982025C3D76500EA830A /* Code.swift */,
+				D97F982325C3DC9800EA830A /* Assembler.swift */,
 			);
-			path = Assembler;
+			path = swifthasm;
+			sourceTree = "<group>";
+		};
+		D97F982A25C3E76100EA830A /* FileHandler */ = {
+			isa = PBXGroup;
+			children = (
+				D97F982F25C3E81D00EA830A /* FileHandler.swift */,
+				D97F983225C3E91D00EA830A /* PathExtensions.swift */,
+			);
+			path = FileHandler;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
-		D97F980825C3BF5C00EA830A /* Assembler */ = {
+		D97F980825C3BF5C00EA830A /* swifthasm */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = D97F981025C3BF5C00EA830A /* Build configuration list for PBXNativeTarget "Assembler" */;
+			buildConfigurationList = D97F981025C3BF5C00EA830A /* Build configuration list for PBXNativeTarget "swifthasm" */;
 			buildPhases = (
 				D97F980525C3BF5C00EA830A /* Sources */,
 				D97F980625C3BF5C00EA830A /* Frameworks */,
@@ -77,9 +112,13 @@
 			);
 			dependencies = (
 			);
-			name = Assembler;
+			name = swifthasm;
+			packageProductDependencies = (
+				D97F982725C3E40900EA830A /* ArgumentParser */,
+				D97F982C25C3E80100EA830A /* SwiftIO */,
+			);
 			productName = Assembler;
-			productReference = D97F980925C3BF5C00EA830A /* Assembler */;
+			productReference = D97F980925C3BF5C00EA830A /* swifthasm */;
 			productType = "com.apple.product-type.tool";
 		};
 /* End PBXNativeTarget section */
@@ -96,7 +135,7 @@
 					};
 				};
 			};
-			buildConfigurationList = D97F980425C3BF5C00EA830A /* Build configuration list for PBXProject "Assembler" */;
+			buildConfigurationList = D97F980425C3BF5C00EA830A /* Build configuration list for PBXProject "swifthasm" */;
 			compatibilityVersion = "Xcode 9.3";
 			developmentRegion = en;
 			hasScannedForEncodings = 0;
@@ -105,11 +144,15 @@
 				Base,
 			);
 			mainGroup = D97F980025C3BF5C00EA830A;
+			packageReferences = (
+				D97F982625C3E40900EA830A /* XCRemoteSwiftPackageReference "swift-argument-parser" */,
+				D97F982B25C3E80100EA830A /* XCRemoteSwiftPackageReference "SwiftIO" */,
+			);
 			productRefGroup = D97F980A25C3BF5C00EA830A /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
 			targets = (
-				D97F980825C3BF5C00EA830A /* Assembler */,
+				D97F980825C3BF5C00EA830A /* swifthasm */,
 			);
 		};
 /* End PBXProject section */
@@ -119,7 +162,14 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				D97F981B25C3C43F00EA830A /* AssemblerFormatter.swift in Sources */,
+				D97F983025C3E81D00EA830A /* FileHandler.swift in Sources */,
+				D97F981825C3C10700EA830A /* Parser.swift in Sources */,
+				D97F981E25C3CE8E00EA830A /* SymbolTable.swift in Sources */,
+				D97F983325C3E91D00EA830A /* PathExtensions.swift in Sources */,
 				D97F980D25C3BF5C00EA830A /* main.swift in Sources */,
+				D97F982425C3DC9800EA830A /* Assembler.swift in Sources */,
+				D97F982125C3D76500EA830A /* Code.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -266,7 +316,7 @@
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
-		D97F980425C3BF5C00EA830A /* Build configuration list for PBXProject "Assembler" */ = {
+		D97F980425C3BF5C00EA830A /* Build configuration list for PBXProject "swifthasm" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				D97F980E25C3BF5C00EA830A /* Debug */,
@@ -275,7 +325,7 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		D97F981025C3BF5C00EA830A /* Build configuration list for PBXNativeTarget "Assembler" */ = {
+		D97F981025C3BF5C00EA830A /* Build configuration list for PBXNativeTarget "swifthasm" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				D97F981125C3BF5C00EA830A /* Debug */,
@@ -285,6 +335,38 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCRemoteSwiftPackageReference section */
+		D97F982625C3E40900EA830A /* XCRemoteSwiftPackageReference "swift-argument-parser" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/apple/swift-argument-parser";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 0.3.2;
+			};
+		};
+		D97F982B25C3E80100EA830A /* XCRemoteSwiftPackageReference "SwiftIO" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/sharplet/SwiftIO.git";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 0.2.0;
+			};
+		};
+/* End XCRemoteSwiftPackageReference section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		D97F982725C3E40900EA830A /* ArgumentParser */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = D97F982625C3E40900EA830A /* XCRemoteSwiftPackageReference "swift-argument-parser" */;
+			productName = ArgumentParser;
+		};
+		D97F982C25C3E80100EA830A /* SwiftIO */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = D97F982B25C3E80100EA830A /* XCRemoteSwiftPackageReference "SwiftIO" */;
+			productName = SwiftIO;
+		};
+/* End XCSwiftPackageProductDependency section */
 	};
 	rootObject = D97F980125C3BF5C00EA830A /* Project object */;
 }
